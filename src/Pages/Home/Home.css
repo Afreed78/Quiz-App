@@ -1,0 +1,97 @@
+.content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f5f5f5; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .settings {
+    width: 45%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    background-color: #ffffff; /* White background for settings */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease; /* Animation for hover */
+  }
+  
+  .settings:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+  }
+  
+  .banner {
+    width: 55%;
+    align-self: center;
+    padding: 8px;
+    border-radius: 10px; /* Rounded corners for the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for the banner */
+    transition: transform 0.3s ease; /* Animation for hover */
+  }
+  
+  .banner:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  @media (max-width: 800px) {
+    .content {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .banner {
+      width: 85%;
+      padding: 0;
+      padding-top: 20px;
+    }
+    .settings {
+      width: 100%;
+    }
+  }
+  
+  .settings__select {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    flex: 0.8;
+    justify-content: space-evenly;
+  }
+  
+  .settings__select .MuiTextField-root {
+    margin-bottom: 15px; /* Space between text fields */
+  }
+  
+  .settings__select .MuiButton-root {
+    background-color: #48dbfb; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+  }
+  
+  .settings__select .MuiButton-root:hover {
+    background-color: #ff6b6b; /* Button hover color */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .error-message {
+    color: #ff6b6b; /* Error message color */
+    margin-bottom: 20px; /* Space below the error message */
+    font-weight: bold; /* Make the error message bold */
+    animation: fadeIn 0.5s ease-in; /* Fade-in animation for error message */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

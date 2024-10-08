@@ -1,0 +1,106 @@
+.title {
+    text-transform: uppercase;
+    font-size: 4vw; /* Decreased font size for header */
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    color: #ff6b6b; /* Updated color */
+    transition:
+      color 0.3s ease-in-out,
+      transform 0.3s ease-in-out; /* Animation for hover */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Slight text shadow for depth */
+  }
+  
+  .title:hover {
+    color: #48dbfb; /* Change color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(
+      135deg,
+      rgba(34, 193, 195, 1),
+      rgba(253, 187, 45, 1)
+    ); /* Gradient background */
+    padding: 10px 0; /* Decreased padding */
+    animation: slideDown 1s ease-in-out; /* Slide down animation for the entire header */
+    position: relative; /* To allow pseudo-elements for 3D effect */
+    overflow: hidden; /* Prevents overflow from 3D effect */
+  }
+  
+  /* 3D Effect using a pseudo-element */
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.5)
+    );
+    transform: translateZ(-1px) scale(2); /* Create a 3D effect */
+    z-index: 0; /* Position behind the header content */
+  }
+  
+  .header > * {
+    position: relative; /* Ensure child elements are above the background */
+    z-index: 1; /* Bring the content above the pseudo-element */
+  }
+  
+  .divider {
+    margin: 10px;
+    width: 90%;
+    height: 4px;
+    background: linear-gradient(to right, #ff6b6b, #48dbfb); /* Gradient color */
+    border: none;
+    animation: growWidth 1s ease-in-out; /* Animate the divider on load */
+  }
+  
+  @keyframes slideDown {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes growWidth {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 90%;
+    }
+  }
+  
+  /* New Background Animation */
+  @keyframes backgroundAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .header {
+    background: linear-gradient(
+      135deg,
+      rgba(34, 193, 195, 1),
+      rgba(253, 187, 45, 1)
+    );
+    background-size: 200% 200%; /* Increase the size for animation */
+    animation: backgroundAnimation 15s ease infinite; /* Infinite animation */
+  }
+  

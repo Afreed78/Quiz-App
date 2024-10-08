@@ -1,0 +1,41 @@
+.quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners for the container */
+    padding: 20px; /* Padding for spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  }
+  
+  .subtitle {
+    font-size: 28px; /* Increased font size for emphasis */
+    font-weight: 600; /* Bolder font weight */
+    color: #333; /* Darker text color */
+    border: 2px solid #007bff; /* Primary color border */
+    border-radius: 5px; /* Rounded corners for the border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 10px 15px; /* Increased padding for better touch */
+    background-color: #e7f1ff; /* Light blue background */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  .subtitle:hover {
+    background-color: #d4e4ff; /* Slightly darker blue on hover */
+  }
+  
+  .quizInfo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin: 10px 0; /* Margin adjusted for better spacing */
+    font-size: 16px; /* Font size for quiz info */
+    color: #555; /* Softer color for text */
+    padding: 10px; /* Padding for better spacing */
+    border-radius: 5px; /* Rounded corners for quiz info */
+    background-color: #ffffff; /* White background for quiz info */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for quiz info */
+  }
+  
